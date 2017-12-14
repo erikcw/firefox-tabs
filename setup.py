@@ -11,11 +11,16 @@ setup(
     author = "Erik Wickstrom",
     author_email = "erik@erikwickstrom.com",
     url = "https://github.com/erikcw/firefox-tabs",
-    version = "0.1",
+    version = "0.2",
     packages = find_packages(),
     zip_safe = False,
     include_package_data=True,
     install_requires=['lz4',],
+    entry_points={
+    'console_scripts': [
+        'fftabs=firefox_tabs.fftabs:main',
+    ],
+    },
     classifiers = [
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
