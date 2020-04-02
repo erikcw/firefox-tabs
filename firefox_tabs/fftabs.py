@@ -25,7 +25,8 @@ def list_open_tabs(path):
 
     for window_idx, window in enumerate(session_data['windows']):
         for tab in window['tabs']:
-            current_tab = tab['entries'][-1]
+            current_entry = tab['index'] - 1
+            current_tab = tab['entries'][current_entry]
             output = {
                 'url': current_tab['url'],
                 'title': current_tab['title'],
