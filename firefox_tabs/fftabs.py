@@ -1,9 +1,8 @@
 from __future__ import print_function
 import argparse
 import json
-import lz4
+import lz4.block
 import os
-import sys
 
 def load_data(path):
     """
